@@ -1,5 +1,5 @@
 /**
- * onThisPage scans the desired portion of the page looking for heading tags. It 
+ * autoMenu scans the desired portion of the page looking for heading tags. It 
  * will generate a linked, nested unordered list that will reflect the hiearchy of headings,
  * as well as anchors at each heading tag. This list will be appended inside the selected element.
  * 
@@ -18,7 +18,7 @@
  * 
  * pageOffset - int: How far to push down after an anchor is clicked.
  * 
- * Example Usage: ("#menu").onThisPage({
+ * Example Usage: ("#menu").autoMenu({
  * 						startDepth: 2,
  * 						endDepth: 4,
  * 						scanLocation: "body"
@@ -27,7 +27,7 @@
  * starting at h2, going down to h4. It would appear in any element with the id "menu". 
  */
 (function($) {
-	$.fn.onThisPage = function (settings) {
+	$.fn.autoMenu = function (settings) {
 			settings = $.extend({  // this defines the defaults
 							startDepth : 2,  // starting level param
 							endDepth: 4,  // ending level param
